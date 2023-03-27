@@ -27,3 +27,29 @@ server.listen(port, hostname, () => {
 });
 
 ```
+
+
+## Using express server
+
+**Steps**
+1. npm i express
+2. import express module
+3. create a express app 
+4. listen on port
+
+```
+const express = require('express');
+const port = 3000;
+const app = express();
+
+app.get("/", (req, res, next) => {
+   res.json({
+      "name": "Anjali"
+   })
+})
+
+app.listen(port, () => {
+   console.log(`Server running ${port}`);
+})
+
+```
